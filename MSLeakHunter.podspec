@@ -87,7 +87,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = '*.{h,m}'
-
+  s.exclude_files = 'MSLeakHunterRetainBreakpointsHelper.h,MSLeakHunterRetainBreakpointsHelper.m'
   # s.public_header_files = 'Classes/**/*.h'
 
 
