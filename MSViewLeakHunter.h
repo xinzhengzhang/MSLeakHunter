@@ -14,7 +14,12 @@
  * @discussion allows you to enable/disable only this leak hunter.
  * if MSLeakHunter is completely disabled, this setting doesn't have effect.
  */
+#ifndef __OPTIMIZE__
+#define MSViewLeakHunter_ENABLED 1
+
+#else
 #define MSViewLeakHunter_ENABLED 0
+#endif
 
 #if MSViewLeakHunter_ENABLED
 

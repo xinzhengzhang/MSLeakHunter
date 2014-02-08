@@ -13,7 +13,13 @@
  * Classes that implement the `MSLeakHunter` protocol should wrap all their code between #if and #endif
  * statements so that none of their code is compiled if this is turned off.
  */
-#define MSLeakHunter_ENABLED TARGET_IPHONE_SIMULATOR
+
+#ifndef __OPTIMIZE__
+#define MSLeakHunter_ENABLED 1
+
+#else
+#define MSLeakHunter_ENABLED 0
+#endif
 
 #if MSLeakHunter_ENABLED
 
